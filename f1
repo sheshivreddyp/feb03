@@ -3,10 +3,12 @@ This is My SQL file f1 Created By Harshavardhan
 Testing Terraform for Dev Env*/
 variable "v_ami"{
 }
-resource "aws_instance" "myinstance"{
-	ami=var.v_ami
-	instance_type="t2.small"
-}
+
 resource "aws_eip" "x"{
+}
+resource aws_instance "i1"{
+	count=2
+        ami="ami-76548684236582"
+        instance_type="t2.micro"
 }
 
