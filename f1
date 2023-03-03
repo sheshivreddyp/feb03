@@ -1,4 +1,9 @@
-This is file f1
+/* This is file f1
 This is My SQL file f1 Created By Harshavardhan
-Testing Terraform for Dev Env
+Testing Terraform for Dev Env*/
+resource aws_instance "i1"{
+	count=2
+        ami="ami-76548684236582"
+        instance_type="t2.micro"
+}
 
