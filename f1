@@ -1,4 +1,12 @@
-This is file f1
+/*This is file f1
 This is My SQL file f1 Created By Harshavardhan
-Testing Terraform for Dev Env
+Testing Terraform for Dev Env*/
+variable "v_ami"{
+}
+resource "aws_instance" "myinstance"{
+	ami=var.v_ami
+	instance_type="t2.small"
+}
+resource "aws_eip" "x"{
+}
 
